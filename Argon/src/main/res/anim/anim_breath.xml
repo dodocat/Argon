@@ -1,0 +1,55 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially"
+    android:fillAfter="true">
+    <!--插值器使用立方减速 效果很逼真-->
+    <set
+        android:interpolator="@android:interpolator/decelerate_cubic"
+        android:fillAfter="true"
+        android:ordering="together">
+        <!--同步动画-->
+        <!--X Y轴同时放大5% -->
+        <objectAnimator
+            android:propertyName="scaleX"
+            android:duration="2700"
+            android:valueTo="1.5"
+            android:valueFrom="1"
+            android:valueType="floatType" />
+        <objectAnimator
+            android:propertyName="scaleY"
+            android:duration="2700"
+            android:valueTo="1.5"
+            android:valueFrom="1"
+            android:valueType="floatType" />
+        <objectAnimator
+            android:propertyName="alpha"
+            android:duration="2700"
+            android:valueTo="0.7"
+            android:valueFrom="0.3"
+            android:valueType="floatType"/>
+    </set>
+    <set
+        android:interpolator="@android:interpolator/decelerate_cubic"
+        android:fillAfter="true"
+        android:ordering="together">
+        <!--X Y轴同时缩小回原始大小 -->
+        <objectAnimator
+            android:propertyName="scaleX"
+            android:duration="1300"
+            android:valueTo="1"
+            android:valueFrom="1.5"
+            android:valueType="floatType" />
+        <objectAnimator
+            android:propertyName="scaleY"
+            android:duration="1300"
+            android:valueTo="1"
+            android:valueFrom="1.5"
+            android:valueType="floatType" />
+        <objectAnimator
+            android:propertyName="alpha"
+            android:duration="1300"
+            android:valueTo="0.3"
+            android:valueFrom="0.7"
+            android:valueType="floatType"/>
+
+    </set>
+</set>
